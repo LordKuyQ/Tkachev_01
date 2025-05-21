@@ -1,0 +1,5 @@
+
+Scaffold-DbContext "Server=DBSRV/PH2024;Database=учебная_NDA_labs;
+Trusted_Connection=True;
+TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer
+-OutputDir Models -Context DataBaseContext

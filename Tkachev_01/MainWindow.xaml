@@ -1,0 +1,39 @@
+﻿<Window x:Class="Tkachev_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tkachev_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10">
+            <DataGrid Name="datagrid_orders" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Order Date" Binding="{Binding OrderDate, StringFormat=yyyy-MM-dd}"/>
+                    <DataGridTextColumn Header="Customer First Name" Binding="{Binding Fcustomer.FirstName}"/>
+                    <DataGridTextColumn Header="Customer Email" Binding="{Binding Fcustomer.Email}"/>
+                    <DataGridTextColumn Header="Product Name" Binding="{Binding Fproduct.ProductName}"/>
+                    <DataGridTextColumn Header="Product Price" Binding="{Binding Fproduct.Price}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+                <Button Name="Orders_customer_button" Click="Orders_customer_button_Click">Мои Покупки</Button>
+                <Button Name="Clear_button" Click="Clear_button_Click">Сбросить</Button>
+                <StackPanel Orientation="Vertical">
+                    <Label>Фильтр по цене</Label>
+                    <TextBox Name="Price_textblock" TextChanged="Price_textblock_Changed"></TextBox>
+                </StackPanel>
+                <Button Name="Sort_price_button" Click="Sort_price_button_Click">Сортировка по стоимости</Button>
+                <StackPanel Orientation="Vertical">
+                    <Label>Фильтр по имени</Label>
+                    <TextBox Name="Name_textblock"></TextBox>
+                </StackPanel>
+                <Button Name="Name_textblock_button" Click="Name_textblock_button_click">Применить</Button>
+                <Button Name="Sort_date_button" Click="Sort_date_button_Click">Сортировка по дате</Button>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

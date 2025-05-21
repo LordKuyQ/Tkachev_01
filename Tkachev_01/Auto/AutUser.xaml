@@ -1,0 +1,22 @@
+﻿<Window x:Class="Tkachev_01.Auto.AutUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tkachev_01.Auto"
+        mc:Ignorable="d"
+        Title="AutUser" Height="289" Width="320">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Margin="15" Orientation="Horizontal">
+            <TextBox Name="BoxName" MinWidth="120"/>
+            <Label Content="Email"/>
+        </StackPanel>
+        <StackPanel Margin="15" Orientation="Horizontal">
+            <TextBox Name="BoxPass" MinWidth="120"/>
+            <Label Content="Пароль"/>
+        </StackPanel>
+        <StackPanel Margin="15" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="0 0 15 0" Content="войти" Click="Button_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
